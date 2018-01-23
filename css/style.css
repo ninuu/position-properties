@@ -1,0 +1,151 @@
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	padding:50px;
+}
+.vertical-items{
+	display:inline-block;	
+}
+.navigation ul li a{
+	font-size:48px;
+	text-transform:uppercase;
+	color:#FFF;
+	padding:0 20px;
+}
+.navigation ul li a :nth-child(4){
+	padding-right:0;
+}
+.main-wrapper{
+	width: 100%;
+	height: 100%;
+	padding-top:5%;
+	background-color: #22B573;
+	position: relative;
+}
+.white-block{
+	width: 45%;
+    height: 60%;
+    background-color: grey;
+    position: absolute;
+    bottom:0;
+    left:0;
+    z-index:20; 
+    /*transition-property: background-color;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    transition-delay: 1s;*/
+   /* transition: background-color 3s linear 1s;*/
+    transition: background-color .3s linear;
+}
+.yellow-logo{
+	height:90%;
+	width:80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position:absolute;
+	right: 0;
+	bottom: 0;
+	/*top:0;*/
+	z-index:10;
+}
+.green-block{
+	width: 50%;
+	height: 50%;
+	background-color: #006837;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	transition: background-color .3s linear;
+	animation:animationName 3s linear;
+}
+.white-block:hover{
+	background-color: yellow;
+}
+.white-block:hover .green-block{
+	background-color: red;
+}
+.white-block:hover .big-text{
+	color:aqua;
+	transform:translate(-50%,-50%) rotate(0);
+}
+.white-block:hover .small-text{
+	right:10%;
+	color: #ED1C24;
+}
+.big-text{
+	font-size:31px;
+	text-transform: uppercase;
+	position: absolute;
+	top:50%;
+	left:50%;
+	white-space:nowrap;
+	transform:translate(-50%,-50%) rotate(38deg);
+	color:yellow;
+	transition: transform .3s linear,color .3s linear;
+	animation: loop 3s infinite;
+}
+
+.small-text{
+	font-size:18px;
+	color:#39B54A;
+	position: absolute;
+	bottom:0%;
+	right:5%;
+	transition: right .3s linear,color .3s linear;
+}
+.footer{
+	position: absolute;
+	bottom:2%;
+	right:2%;
+
+}
+.main-wrapper:hover .footer{
+	color: #FCEE21;
+
+}
+/*.test{
+	position:absolute;
+	width: 50%;
+	height: 50%;
+	background-color: yellow;
+	z-index: 15;
+	top:20%;
+	left:20%;
+}*/
+@keyframes animationName{
+    10% {
+    	top: 0px; 
+    	left:0px;}
+    50% {
+    	top: 100px; 
+    	left:100px;}
+    100%{
+    	top: 200px; 
+    	left:200px;}
+}
+@keyframes loop{
+	0%{
+		transform:translate(-50%,-50%) rotate(0deg);
+	}
+    10% {
+    	transform:translate(-50%,-50%) rotate(38deg);
+    }
+	20% {
+    	transform:translate(-50%,-50%) rotate(180deg); 
+    	}
+    40% {
+    	transform:translate(-50%,-50%) rotate(360deg); 
+    	}
+    60% {
+    	transform:translate(-50%,-50%) rotate(180deg); 
+    	}
+    80% {
+    	transform:translate(-50%,-50%) rotate(38deg);
+    	}
+    100%{
+    	transform:translate(-50%,-50%) rotate(0deg);
+    }
